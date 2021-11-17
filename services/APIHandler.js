@@ -4,14 +4,15 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return axios.get(this.BASE_URL+"/characters")
   }
 
   getOneRegister () {
 
   }
 
-  createOneRegister () {
+  createOneRegister (body) {
+    return axios.post(this.BASE_URL+"/characters", body).then(response => response.data)
 
   }
 
